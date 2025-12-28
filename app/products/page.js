@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import { ALL_PRODUCTS } from '@/lib/productsData';
 
-const ProductsPage = () => {
+function ProductsContent() {
   const searchParams = useSearchParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -244,6 +244,14 @@ const ProductsPage = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+const ProductsPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductsContent />
+    </Suspense>
   );
 };
 
