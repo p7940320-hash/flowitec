@@ -51,7 +51,7 @@ const ProductDetailPage = async ({ params }) => {
             <span className="mx-2">/</span>
             <Link href="/products" className="hover:underline">Products</Link>
             <span className="mx-2">/</span>
-            <Link href={`/products#${product.category}`} className="hover:underline capitalize">
+            <Link href={`/products?category=${product.category}`} className="hover:underline capitalize">
               {product.category}
             </Link>
             <span className="mx-2">/</span>
