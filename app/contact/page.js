@@ -199,7 +199,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-muted/30">
+      <section id="contact-form" className="py-20 bg-muted/30">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">

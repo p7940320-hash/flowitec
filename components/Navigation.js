@@ -15,18 +15,17 @@ const Navigation = () => {
       name: 'Products',
       href: '/products',
       dropdown: [
-        { name: 'Pumps', href: '/products#pumps' },
-        { name: 'Valves', href: '/products#valves' },
-        { name: 'Motors', href: '/products#motors' },
-        { name: 'Control Panels', href: '/products#control-panels' },
-        { name: 'Spare Parts', href: '/products#spare-parts' },
-        { name: 'Mixers', href: '/products#mixers' },
+        { name: 'Pumps', href: '/products?category=pumps' },
+        { name: 'Valves', href: '/products?category=valves' },
+        { name: 'Motors', href: '/products?category=motors' },
+        { name: 'Control Panels', href: '/products?category=control-panels' },
+        { name: 'Spare Parts', href: '/products?category=spare-parts' },
       ]
     },
     { name: 'Applications', href: '/applications' },
     { name: 'Industries', href: '/industries' },
     { name: 'Services', href: '/services' },
-    { name: 'References', href: '/references' },
+    { name: 'Order References', href: '/references' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -40,7 +39,7 @@ const Navigation = () => {
             <img 
               src="/flowitec-logo.png" 
               alt="Flowitec" 
-              className="h-52 lg:h-60 w-auto object-contain"
+              className="h-12 lg:h-14 w-auto object-contain"
             />
           </Link>
 
@@ -80,7 +79,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Link href="/contact" className="btn primary text-sm px-5 py-2.5">
+            <Link href="/contact#contact-form" className="btn primary text-sm px-5 py-2.5">
               Get a Quote
             </Link>
           </div>
@@ -136,7 +135,7 @@ const Navigation = () => {
               </div>
             ))}
             <div className="px-4 py-3">
-              <Link href="/contact" className="btn primary w-full text-center touch-manipulation" onClick={() => setIsOpen(false)}>
+              <Link href="/contact#contact-form" className="btn primary w-full text-center touch-manipulation" onClick={() => setIsOpen(false)}>
                 Get a Quote
               </Link>
             </div>

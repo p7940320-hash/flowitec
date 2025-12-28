@@ -52,7 +52,7 @@ const ReferencesPage = () => {
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/references-hero.jpg"
-            alt="Flowitec Project References"
+            alt="Flowitec Order References"
             fill
             className="object-cover"
             priority
@@ -63,10 +63,10 @@ const ReferencesPage = () => {
           <nav className="text-sm mb-4 opacity-90">
             <a href="/" className="hover:underline">Home</a>
             <span className="mx-2">/</span>
-            <span>References</span>
+            <span>Order References</span>
           </nav>
-          <h1 className="text-5xl font-bold mb-4">Project References</h1>
-          <p className="text-xl max-w-2xl">500+ successful projects delivered across Ghana, Nigeria, and Kenya since 2017</p>
+          <h1 className="text-5xl font-bold mb-4">Order References</h1>
+          <p className="text-xl max-w-2xl">1000+ successful order deliveries across Ghana, Nigeria, and Kenya</p>
         </div>
       </section>
 
@@ -76,7 +76,7 @@ const ReferencesPage = () => {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-2">
               <Filter className="w-5 h-5 text-muted-foreground" />
-              <span className="font-medium">Filter Projects:</span>
+              <span className="font-medium">Filter Orders:</span>
             </div>
             <div className="flex flex-wrap gap-4">
               <div>
@@ -116,7 +116,7 @@ const ReferencesPage = () => {
       <section className="py-20 bg-background">
         <div className="container-custom">
           <div className="mb-6 text-muted-foreground">
-            Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+            Showing {filteredProjects.length} order{filteredProjects.length !== 1 ? 's' : ''}
           </div>
 
           {filteredProjects.length > 0 ? (
@@ -163,7 +163,7 @@ const ReferencesPage = () => {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground mb-4">No projects match your filters</p>
+              <p className="text-xl text-muted-foreground mb-4">No orders match your filters</p>
               <button
                 onClick={() => {
                   setFilterIndustry('all');
@@ -181,7 +181,7 @@ const ReferencesPage = () => {
 <section className="py-20 bg-background">
   <div className="container-custom">
     <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-      Project Gallery
+      Order Gallery
     </h2>
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {Gallery.map((src, index) => (
@@ -191,7 +191,7 @@ const ReferencesPage = () => {
         >
           <Image
             src={src}
-            alt="Project reference"
+            alt="Order reference"
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
             priority={true}

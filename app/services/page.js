@@ -50,7 +50,7 @@ const ServicesPage = () => {
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
-                <a href="/contact" className="text-primary font-medium hover:underline">
+                <a href="/contact#contact-form" className="text-primary font-medium hover:underline">
                   Request Service →
                 </a>
               </div>
@@ -160,7 +160,7 @@ const ServicesPage = () => {
           <p className="text-lg mb-8 opacity-90">
             Get in touch with our service team to schedule maintenance or request support
           </p>
-          <a href="/contact" className="btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4">
+          <a href="/contact#contact-form" className="btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4">
             Request Service
           </a>
         </div>

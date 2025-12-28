@@ -83,7 +83,7 @@ const ApplicationsPage = () => {
                 Our application engineers are available to help you select the right equipment for your specific requirements. We provide technical calculations, system design, and performance guarantees.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="btn primary">
+                <a href="/contact#contact-form" className="btn primary">
                   Talk to an Applications Engineer
                 </a>
                 <a href="/products" className="btn ghost">

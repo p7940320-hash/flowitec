@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import { ALL_PRODUCTS } from '@/lib/productsData';
 
 const ProductsPage = () => {
+  const searchParams = useSearchParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -38,7 +40,13 @@ const ProductsPage = () => {
       expanded[cat.id] = true;
     });
     setExpandedCategories(expanded);
-  }, []);
+    
+    // Set category from URL parameter
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParams]);
 
   const toggleCategory = (categoryId) => {
     setExpandedCategories(prev => ({
@@ -83,7 +91,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Search and Filters */}
-      <section className="py-8 bg-background border-b sticky top-20 z-40">
+      <section className="py-8 bg-background border-b">
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}

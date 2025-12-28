@@ -28,7 +28,7 @@ export default function Home() {
           <Link href="/services" className="btn primary text-lg px-8 py-4">
             Our Services
           </Link>
-          <Link href="/contact" className="btn ghost text-lg px-8 py-4">
+          <Link href="/contact#contact-form" className="btn ghost text-lg px-8 py-4">
             Get a Quote
           </Link>
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
             <div className="flex animate-scroll-left">
               {/* First set of logos */}
               {PARTNERS.map((partner) => (
-                <div key={partner.id} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity bg-transparent">
+                <div key={partner.id} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
@@ -180,7 +180,7 @@ export default function Home() {
               ))}
               {/* Duplicate set for seamless loop */}
               {PARTNERS.map((partner) => (
-                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity bg-transparent">
+                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
