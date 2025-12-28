@@ -174,7 +174,11 @@ export default function Home() {
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
-                    className={`max-h-full max-w-full object-contain ${partner.name === 'Fluimac' ? 'transform rotate-0' : ''}`}
+                    className={`max-h-full max-w-full object-contain ${
+                      ['Fluimac', 'Bray', 'Franklin Electric', 'Meson Group', 'SAER Elettropompe', 'Pioneer Pump', 'C.R.I. Pumps'].includes(partner.name) 
+                        ? 'mix-blend-multiply' 
+                        : ''
+                    }`}
                   />
                 </div>
               ))}
@@ -184,7 +188,11 @@ export default function Home() {
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
-                    className={`max-h-full max-w-full object-contain ${partner.name === 'Fluimac' ? 'transform rotate-0' : ''}`}
+                    className={`max-h-full max-w-full object-contain ${
+                      ['Fluimac', 'Bray', 'Franklin Electric', 'Meson Group', 'SAER Elettropompe', 'Pioneer Pump', 'C.R.I. Pumps'].includes(partner.name) 
+                        ? 'mix-blend-multiply' 
+                        : ''
+                    }`}
                   />
                 </div>
               ))}
