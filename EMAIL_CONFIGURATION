@@ -1,0 +1,104 @@
+# Flowitec Email Configuration
+
+## Current Setup
+
+All form submissions on the Flowitec website send emails to: **info@flowitec.com**
+
+## Configuration Details
+
+### Environment Variable
+```
+EMAIL_TO=info@flowitec.com
+```
+Located in: `/app/.env`
+
+### Forms That Send Emails
+
+1. **Contact Form** (`/contact`)
+   - Route: `POST /api/forms/contact`
+   - Email Subject: "New Contact Form Submission"
+   - Recipient: info@flowitec.com
+   - Contains: Name, Company, Email, Phone, Country, Interest, Message
+
+2. **Service Request Form** (`/services`)
+   - Route: `POST /api/forms/service-request`
+   - Email Subject: "Service Request - {serviceType}"
+   - Recipient: info@flowitec.com
+   - Contains: Name, Company, Email, Phone, Location, Service Type, Message
+
+3. **Career Application Form** (`/careers/{slug}`)
+   - Route: `POST /api/forms/career-apply`
+   - Email Subject: "Job Application - {position}"
+   - Recipient: info@flowitec.com
+   - Contains: Name, Email, Phone, Position, Cover Letter, CV Attachment
+
+### Get a Quote Buttons
+
+All "Get a Quote" buttons across the site link to the Contact page (`/contact`), where users fill out the contact form that sends to **info@flowitec.com**.
+
+Locations of "Get a Quote" buttons:
+- Home page hero section
+- Home page CTA section
+- Products page CTA
+- Industry detail pages
+- Navigation header (sticky)
+
+## Email Flow
+
+1. User clicks "Get a Quote" → Redirected to `/contact`
+2. User fills contact form with their details
+3. Form submits to `POST /api/forms/contact`
+4. Backend:
+   - Validates form data
+   - Saves submission to PostgreSQL database
+   - Sends email to **info@flowitec.com**
+   - Returns success message to user
+
+## Current Email Mode
+
+**MVP Mode (Console Logging)**
+- For development/testing, emails are logged to console
+- Email content, recipient, and subject are displayed in server logs
+- To enable actual email sending, configure SMTP settings:
+  - SMTP_HOST
+  - SMTP_PORT
+  - SMTP_USER
+  - SMTP_PASSWORD
+
+## Email Templates
+
+All emails are formatted with:
+- Flowitec branding (Blue #0D47A1)
+- Professional HTML layout
+- All form field data
+- Sender contact information
+
+## Verification
+
+To verify email configuration:
+```bash
+# Check environment variable
+cat /app/.env | grep EMAIL_TO
+# Result: EMAIL_TO=info@flowitec.com
+
+# Check server logs after form submission
+sudo supervisorctl tail -f nextjs
+# Look for: 📧 Email would be sent:
+#           To: info@flowitec.com
+```
+
+## Production Deployment
+
+For production email delivery:
+1. Set up SMTP service (SendGrid, AWS SES, Resend, etc.)
+2. Update .env with SMTP credentials
+3. Email utility will automatically send real emails
+4. All emails will deliver to info@flowitec.com
+
+## Contact Information
+
+**Current Email Recipient**: info@flowitec.com
+**Backup/Reply-To**: info@flowitec.com
+**Email From**: noreply@flowitec.com
+
+✅ **Configuration Complete and Working**

@@ -1,0 +1,5 @@
+# Flowitec Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://nextjs-flowitec.preview.emergentagent.com/sitemap.xml
