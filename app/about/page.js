@@ -179,7 +179,7 @@ const AboutPage = () => {
                     <Award className="w-8 h-8 text-primary" />
                   </div>
                   <div className="text-2xl font-bold">1000+</div>
-                  <div className="text-sm text-muted-foreground">Projects</div>
+                  <div className="text-sm text-muted-foreground">Orders</div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
