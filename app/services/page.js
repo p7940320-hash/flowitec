@@ -36,7 +36,7 @@ const ServicesPage = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6">Complete Lifecycle Support</h2>
             <p className="text-lg text-muted-foreground">
-              From initial consultation to ongoing maintenance, Flowitec provides end-to-end support for all your industrial equipment needs.
+              From initial system design to after-sales support and ensuring maximum plant uptime. Flowitec provides end-to-end support for all your industrial equipment needs.
             </p>
           </div>
 

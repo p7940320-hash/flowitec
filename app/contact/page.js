@@ -358,8 +358,8 @@ const ContactPage = () => {
                 <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
-                  <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
-                  <p><strong>Sunday:</strong> Closed</p>
+                  <p><strong>Saturday:</strong> Closed, Remote Availability</p>
+                  <p><strong>Sunday:</strong> Closed, Remote Availability</p>
                   <p className="text-primary font-semibold mt-4">24/7 Emergency Support Available</p>
                 </div>
               </div>

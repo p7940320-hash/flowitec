@@ -28,12 +28,9 @@ export default function Home() {
           <Link href="/services" className="btn primary text-lg px-8 py-4">
             Our Services
           </Link>
-          <button 
-            onClick={() => document.getElementById('quote-modal').showModal()}
-            className="btn ghost text-lg px-8 py-4"
-          >
+          <Link href="/contact" className="btn ghost text-lg px-8 py-4">
             Get a Quote
-          </button>
+          </Link>
         </div>
       </HeroVideo>
 
@@ -173,21 +170,21 @@ export default function Home() {
             <div className="flex animate-scroll-left">
               {/* First set of logos */}
               {PARTNERS.map((partner) => (
-                <div key={partner.id} className="flex-shrink-0 mx-8 h-24 w-40 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+                <div key={partner.id} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity bg-transparent">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
-                    className="max-h-full max-w-full object-contain"
+                    className={`max-h-full max-w-full object-contain ${partner.name === 'Fluimac' ? 'transform rotate-0' : ''}`}
                   />
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
               {PARTNERS.map((partner) => (
-                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-24 w-40 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity bg-transparent">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
-                    className="max-h-full max-w-full object-contain"
+                    className={`max-h-full max-w-full object-contain ${partner.name === 'Fluimac' ? 'transform rotate-0' : ''}`}
                   />
                 </div>
               ))}

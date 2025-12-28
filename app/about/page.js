@@ -149,7 +149,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
               <p className="text-lg text-muted-foreground mb-4">
-                Flowitec has rapidly grown to become a trusted provider of engineering and procurement solutions across West and East Africa. With active operations in Ghana, Nigeria, and Kenya, we have successfully completed over 500 projects for clients across diverse industrial sectors.</p>
+                Here at Flowitec, we have been providing engineering and procurement solutions across West and East Africa. We supply not only the best possible products for Maintenance, Repair and Operational needs but for Project requirements as well, be it Expansion, Modification or a New Setup. However, this is not where it ends, not only are we a leading supplier of products but we offer unrivalled services from after-sales support, quick downtime and needs assessments, fast responses to tail-end spend and on-site support.</p>
               <p className="text-lg text-muted-foreground mb-4">
                 We partner with world-renowned manufacturers to supply high-quality pumps, valves, electric motors, control systems, and related components for industries including mining, food and beverage,water mission to Africa and wastewater treatment, agriculture, petrochemical, power generation, and municipal infrastructure.</p>
               <p className="text-lg text-muted-foreground mb-4">
@@ -178,14 +178,14 @@ const AboutPage = () => {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Award className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold">500+</div>
+                  <div className="text-2xl font-bold">1000+</div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Users className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold">7+</div>
+                  <div className="text-2xl font-bold">20+</div>
                   <div className="text-sm text-muted-foreground">Years</div>
                 </div>
               </div>

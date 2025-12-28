@@ -71,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-4 text-base">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
-                <span className="text-gray-300">Head Office: Tema, Ghana</span>
+                <span className="text-gray-300">Head Office: No.31 Spintex-Sakumono Road, Opp. IRS,Comm.18 Junction, Spintex Road-Tema, Greater Accra, Ghana</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
-                <span className="text-gray-300">sales@flowitec.com</span>
+                <a href="mailto:info@flowitec.com" className="text-gray-300 hover:text-white transition-colors">info@flowitec.com</a>
               </li>
             </ul>
             {/* Emergency Hotline */}
