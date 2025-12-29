@@ -297,7 +297,7 @@ const CareersPage = () => {
             We&apos;re always looking for talented individuals. Send us your CV and we&apos;ll keep you in mind for future opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:godwin.asamoah@flowitec.com" className="btn bg-white text-primary hover:bg-gray-100 px-8 py-4">
+            <a href="mailto:hradmin@flowitec.com" className="btn bg-white text-primary hover:bg-gray-100 px-8 py-4">
               Send Your CV
             </a>
             <a href="tel:0247986652" className="btn ghost border-white text-white hover:bg-white hover:text-primary px-8 py-4">
