@@ -25,7 +25,7 @@ const Navigation = () => {
     { name: 'Applications', href: '/applications' },
     { name: 'Industries', href: '/industries' },
     { name: 'Services', href: '/services' },
-    { name: 'Order References', href: '/references' },
+    { name: 'References', href: '/references' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];

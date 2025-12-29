@@ -110,23 +110,15 @@ const CareersPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Benefits</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We take care of our team with a comprehensive benefits package designed to support your wellbeing and work-life balance.
+              When you join our team, you open doors to endless opportunities for career growth and personal development. Surrounded by ambitious, motivated, and intelligent individuals, you'll have the possibility to thrive and excel.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+              If this resonates with you, don't hesitate to reach out and apply for a job today!
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all border-t-4 border-primary group"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <benefit.icon className="w-8 h-8 text-primary group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
+            {/* Remove the benefits.map section */}
           </div>
         </div>
       </section>
