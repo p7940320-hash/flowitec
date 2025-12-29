@@ -211,6 +211,114 @@ const ReferencesPage = () => {
   </div>
 </section>
 
+      {/* Galaxy of Our Customers */}
+      <section className="py-20 bg-muted/30">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Galaxy of Our Customers</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Trusted by leading organizations across Ghana, Nigeria, and Kenya
+            </p>
+          </div>
+          
+          {/* Key Clients Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 items-center">
+            {/* Placeholder client logos - replace with actual client logos */}
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
+                <div className="text-xs text-muted-foreground">Logo Here</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Client Stats */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="text-4xl font-bold text-primary mb-2">150+</div>
+              <div className="text-lg font-semibold mb-1">Active Clients</div>
+              <div className="text-sm text-muted-foreground">Across 3 countries</div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="text-4xl font-bold text-primary mb-2">98%</div>
+              <div className="text-lg font-semibold mb-1">Client Satisfaction</div>
+              <div className="text-sm text-muted-foreground">Based on feedback surveys</div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="text-4xl font-bold text-primary mb-2">85%</div>
+              <div className="text-lg font-semibold mb-1">Repeat Business</div>
+              <div className="text-sm text-muted-foreground">Long-term partnerships</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lightbox Modal */}
       {selectedProject && (
         <div
