@@ -140,11 +140,11 @@ const ServicesPage = () => {
                     For urgent technical support and emergency services:
                   </p>
                   <a
-                    href="tel:+27821234567"
+                    href="tel:+233533810485"
                     className="inline-flex items-center gap-2 text-2xl font-bold text-primary"
                   >
                     <Phone className="w-6 h-6" />
-                    +27 82 123 4567
+                    +233 533 810 485
                   </a>
                 </div>
               </div>
