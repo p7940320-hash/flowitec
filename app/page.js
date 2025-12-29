@@ -25,6 +25,9 @@ export default function Home() {
           High-quality equipment, expert installations, and dependable after-sales support for industry and water systems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
+          <Link href="/products" className="btn primary text-lg px-8 py-4">
+            Our Products
+          </Link>
           <Link href="/services" className="btn primary text-lg px-8 py-4">
             Our Services
           </Link>
@@ -187,7 +190,7 @@ export default function Home() {
             <div className="flex animate-scroll-left">
               {/* First set of logos */}
               {PARTNERS.map((partner) => (
-                <div key={partner.id} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+                <div key={partner.id} className="flex-shrink-0 mx-8 h-48 w-64 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
@@ -195,13 +198,15 @@ export default function Home() {
                       ['Fluimac', 'Bray', 'Franklin Electric', 'Meson Group', 'SAER Elettropompe', 'Pioneer Pump', 'C.R.I. Pumps'].includes(partner.name) 
                         ? 'mix-blend-multiply' 
                         : ''
+                    } ${
+                      partner.name === 'Bray' || partner.name === 'Meson Group' ? 'scale-150' : ''
                     }`}
                   />
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
               {PARTNERS.map((partner) => (
-                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-32 w-48 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+                <div key={`dup-${partner.id}`} className="flex-shrink-0 mx-8 h-48 w-64 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
                   <img 
                     src={partner.logo} 
                     alt={partner.name}
@@ -209,6 +214,8 @@ export default function Home() {
                       ['Fluimac', 'Bray', 'Franklin Electric', 'Meson Group', 'SAER Elettropompe', 'Pioneer Pump', 'C.R.I. Pumps'].includes(partner.name) 
                         ? 'mix-blend-multiply' 
                         : ''
+                    } ${
+                      partner.name === 'Bray' || partner.name === 'Meson Group' ? 'scale-150' : ''
                     }`}
                   />
                 </div>
