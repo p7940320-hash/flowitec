@@ -12,7 +12,8 @@ const AboutPage = () => {
     { year: '2023', event: 'First Office Expansion (Outgrowing our first office we expanded  doubling our office and warehousing facilities)' },
     { year: '2024', event: 'Record Year of USD Turnover' },
     { year: '2024', event: 'Opening of the Nigeria Office' },
-    { year: '2025', event: ' Opening of the Kenya Office (Flowitec Kenya is a valuable asset to our company as it allows expansion into new markets whilst better serving our customers in the East African region)' }
+    { year: '2025', event: ' Opening of the Kenya Office (Flowitec Kenya is a valuable asset to our company as it allows expansion into new markets whilst better serving our customers in the East African region)' },
+    { year: 'The Future', event: 'Today, we have footprints across Africa and a team of experienced professionals who are committed to providing our customers with the best possible service. Flowitec is a trusted partner to some of the world\'s largest companies, and we are proud to continue to grow and expand our operations.' }
   ];
 
   const coreValues = [
@@ -98,7 +99,7 @@ const AboutPage = () => {
         <div className="absolute left-1/2 top-6 -translate-x-1/2 z-10">
           <div
             className={`
-              w-5 h-5 rounded-full bg-primary
+              w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg
               transition-transform duration-500
               ${visible ? 'scale-100' : 'scale-0'}
             `}
@@ -269,16 +270,29 @@ const AboutPage = () => {
           {/* Timeline Container */}
           <div className="relative max-w-6xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2 hidden md:block overflow-hidden">
+              <div 
+                className="w-full bg-primary transition-all duration-1000 ease-out"
+                style={{
+                  height: `${Math.min(100, (timeline.filter((_, i) => i <= timeline.findIndex((_, idx) => {
+                    const element = document.querySelector(`[data-timeline-index="${idx}"]`);
+                    if (!element) return false;
+                    const rect = element.getBoundingClientRect();
+                    return rect.top < window.innerHeight * 0.7;
+                  }).length - 1) / timeline.length) * 100)}%`
+                }}
+              />
+            </div>
             
             {/* Timeline Items */}
             <div className="space-y-12">
               {timeline.map((item, index) => (
-                <TimelineItem 
-                  key={index} 
-                  item={item} 
-                  align={index % 2 === 0 ? 'left' : 'right'} 
-                />
+                <div key={index} data-timeline-index={index}>
+                  <TimelineItem 
+                    item={item} 
+                    align={index % 2 === 0 ? 'left' : 'right'} 
+                  />
+                </div>
               ))}
             </div>
           </div>

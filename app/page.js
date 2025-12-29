@@ -72,6 +72,23 @@ export default function Home() {
         </section>
       </LazySection>
 
+      {/* Products Box */}
+      <LazySection>
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container-custom">
+            <div className="bg-white/10 rounded-xl p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4">Explore Our Complete Product Range</h2>
+              <p className="text-lg mb-6 opacity-90">
+                Discover our comprehensive selection of pumps, valves, motors, and industrial equipment from world-class manufacturers
+              </p>
+              <Link href="/products" className="btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4">
+                View All Products
+              </Link>
+            </div>
+          </div>
+        </section>
+      </LazySection>
+
       {/* Services Preview */}
       <LazySection>
         <section className="py-20 bg-background">
