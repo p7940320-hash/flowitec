@@ -3,20 +3,28 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { X, Download, Filter } from 'lucide-react';
-const Gallery =[
-'/Gallery/gallery2.jpg',
-'/Gallery/gallery3.jpg',
-'/Gallery/gallery4.jpg',
-'/Gallery/gallery5.jpg',
-'/Gallery/gallery6.jpg',
-'/Gallery/gallery7.jpg',
-'/Gallery/gallery8.jpg',
-'/Gallery/gallery9.jpg',
-'/Gallery/gallery10.jpg',
-'/Gallery/gallery11.jpg',
-'/Gallery/gallery12.jpg',
-'/Gallery/gallery13.jpg',
-
+const Gallery = [
+'/gallery/gallery2.jpg',
+'/gallery/gallery3.jpg',
+'/gallery/gallery5.jpg',
+'/gallery/gallery6.jpg',
+'/gallery/gallery7.jpg',
+'/gallery/gallery8.jpg',
+'/gallery/gallery9.jpg',
+'/gallery/gallery10.jpg',
+'/gallery/gallery11.jpg',
+'/gallery/gallery12.jpg',
+'/gallery/gallery13.jpg',
+'/gallery/gallery15.jpeg',
+'/gallery/gallery16.jpeg',
+'/gallery/gallery17.jpeg',
+'/gallery/gallery18.jpeg',
+'/gallery/gallery19.jpeg',
+'/gallery/gallery21.jpeg',
+'/gallery/gallery23.jpeg',
+'/gallery/gallery24.jpeg',
+'/gallery/gallery25.jpeg',
+'/gallery/gallery26.jpeg'
 ];
 
 const ReferencesPage = () => {
