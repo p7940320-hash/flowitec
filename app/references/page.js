@@ -230,13 +230,13 @@ const ReferencesPage = () => {
               'promasidor.jpg', 'quantum.jpg', 'safe.jpg', 'sbc.jpg', 'sunbird.jpg', 'taqa.jpg',
               'tema.jpg', 'uac.jpg', 'valco.jpg', 'vana.jpg', 'volta.jpg', 'wilmar.jpg'
             ].map((logo, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+              <div key={index} className="p-2 rounded-lg hover:shadow-lg transition-all flex items-center justify-center h-24 bg-transparent">
                 <Image
                   src={`/clients/${logo}`}
                   alt={`${logo.replace('.jpg', '').replace('.jpeg', '').replace('.png', '')} logo`}
-                  width={120}
-                  height={60}
-                  className="object-contain max-w-full max-h-full"
+                  width={200}
+                  height={100}
+                  className="object-contain w-full h-full"
                 />
               </div>
             ))}
