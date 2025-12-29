@@ -229,17 +229,40 @@ const ReferencesPage = () => {
               'goldenstar.jpg', 'goldfields.jpg', 'iwad.jpg', 'kasapreko.jpg', 'Newmont.jpg', 'olam.jpg',
               'promasidor.jpg', 'quantum.jpg', 'safe.jpg', 'sbc.jpg', 'sunbird.jpg', 'taqa.jpg',
               'tema.jpg', 'uac.jpg', 'valco.jpg', 'vana.jpg', 'volta.jpg', 'wilmar.jpg'
-            ].map((logo, index) => (
-              <div key={index} className="p-2 rounded-lg hover:shadow-lg transition-all flex items-center justify-center h-24 bg-transparent">
-                <Image
-                  src={`/clients/${logo}`}
-                  alt={`${logo.replace('.jpg', '').replace('.jpeg', '').replace('.png', '')} logo`}
-                  width={200}
-                  height={100}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-            ))}
+            ].map((logo, index) => {
+              const isAsante = logo === 'asante.jpg';
+              const isCarmeuse = logo === 'carmeuse.jpg';
+              const isAsanko = logo === 'asanko.jpg';
+              const isCargill = logo === 'cargill.jpg';
+              const isAdamus = logo === 'adamus.jpg';
+              const isKasapreko = logo === 'kasapreko.jpg';
+              const isIwad = logo === 'iwad.jpg';
+              const isGoldfields = logo === 'goldfields.jpg';
+              const isGoldenstar = logo === 'goldenstar.jpg';
+              const isGbfoods = logo === 'gbfoods.jpg';
+              const isCimaf = logo === 'cimaf.jpg';
+              const isOlam = logo === 'olam.jpg';
+              const isPromasidor = logo === 'promasidor.jpg';
+              const isQuantum = logo === 'quantum.jpg';
+              const isSafe = logo === 'safe.jpg';
+              const isUac = logo === 'uac.jpg';
+              const isValco = logo === 'valco.jpg';
+              const isWilmar = logo === 'wilmar.jpg';
+              const isTema = logo === 'tema.jpg';
+              const needsLargerSize = isAsante || isCarmeuse;
+              
+              return (
+                <div key={index} className={`p-4 rounded-lg hover:shadow-lg transition-all flex items-center h-32 bg-transparent overflow-hidden justify-center`}>
+                  <Image
+                    src={`/clients/${logo}?v=2`}
+                    alt={`${logo.replace('.jpg', '').replace('.jpeg', '').replace('.png', '')} logo`}
+                    width={needsLargerSize ? 280 : 200}
+                    height={needsLargerSize ? 140 : 100}
+                    className={`object-contain max-w-full max-h-full ${needsLargerSize ? 'scale-[2.5]' : ''} ${isAsanko ? 'scale-75 mix-blend-multiply' : ''} ${isCargill ? 'scale-[2] mix-blend-multiply' : ''} ${isAdamus ? 'scale-[2] mix-blend-multiply' : ''} ${isCimaf ? 'scale-[2] mix-blend-multiply' : ''} ${isGbfoods ? 'scale-125' : ''} ${isGoldenstar ? 'scale-[1.75]' : ''} ${isGoldfields ? 'scale-[1.5]' : ''} ${isIwad ? 'scale-125' : ''} ${isKasapreko ? 'scale-[2.5]' : ''} ${isOlam ? 'scale-[2]' : ''} ${isPromasidor ? 'scale-125' : ''} ${isQuantum ? 'scale-125' : ''} ${isSafe ? 'scale-150' : ''} ${isUac ? 'scale-[2]' : ''} ${isValco ? 'scale-125' : ''} ${isWilmar ? 'scale-150' : ''} ${isTema ? 'scale-125' : ''} ${(isAsante || isCarmeuse) ? 'mix-blend-multiply' : ''}`}
+                  />
+                </div>
+              );
+            })}
           </div>
           
           {/* Client Stats */}
