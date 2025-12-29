@@ -1,11 +1,12 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { CheckCircle, Award, Users, Globe, Target, Eye, Heart, Shield, Lightbulb, Handshake } from 'lucide-react';
 import { IMAGES } from '@/lib/mockData';
 
-const AboutPage = () => {
+const AboutContent = () => {
   const timeline = [
     { year: '2017', event: 'Founded (Flowitec was founded with the aim to serve Industries to reduce downtime and meet project deadlines)' },
     { year: '2022', event: 'Opening of the Ghana Office (It was official, Flowitec now had its first office in West Africa)' },
@@ -343,4 +344,10 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+const AboutPage = () => {
+  return <AboutContent />;
+};
+
+export default dynamic(() => Promise.resolve(AboutPage), {
+  ssr: false
+});
