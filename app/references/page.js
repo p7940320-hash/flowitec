@@ -222,80 +222,24 @@ const ReferencesPage = () => {
           </div>
           
           {/* Key Clients Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 items-center">
-            {/* Placeholder client logos - replace with actual client logos */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 items-center">
+            {[
+              'adamus.jpg', 'asanko.jpg', 'asante.jpg', 'bua group.jpg', 'cargill.jpg', 'carmeuse.jpg',
+              'cenpower.jpg', 'cimaf.jpg', 'dangote.jpg', 'gbfoods.jpg', 'ghacem.jpg', 'goldenexotics.jpg',
+              'goldenstar.jpg', 'goldfields.jpg', 'iwad.jpg', 'kasapreko.jpg', 'Newmont.jpg', 'olam.jpg',
+              'promasidor.jpg', 'quantum.jpg', 'safe.jpg', 'sbc.jpg', 'sunbird.jpg', 'taqa.jpg',
+              'tema.jpg', 'uac.jpg', 'valco.jpg', 'vana.jpg', 'volta.jpg', 'wilmar.jpg'
+            ].map((logo, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
+                <Image
+                  src={`/clients/${logo}`}
+                  alt={`${logo.replace('.jpg', '').replace('.jpeg', '').replace('.png', '')} logo`}
+                  width={120}
+                  height={60}
+                  className="object-contain max-w-full max-h-full"
+                />
               </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center h-24">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">CLIENT</div>
-                <div className="text-xs text-muted-foreground">Logo Here</div>
-              </div>
-            </div>
+            ))}
           </div>
           
           {/* Client Stats */}
