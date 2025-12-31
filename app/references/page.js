@@ -254,7 +254,7 @@ const ReferencesPage = () => {
               return (
                 <div key={index} className={`p-4 rounded-lg hover:shadow-lg transition-all flex items-center h-32 bg-transparent overflow-hidden justify-center`}>
                   <Image
-                    src={`/clients/${logo}?v=2`}
+                    src={`/clients/${logo}?v=3`}
                     alt={`${logo.replace('.jpg', '').replace('.jpeg', '').replace('.png', '')} logo`}
                     width={needsLargerSize ? 280 : 200}
                     height={needsLargerSize ? 140 : 100}

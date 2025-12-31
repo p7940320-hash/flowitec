@@ -1,27 +1,45 @@
 import { NextResponse } from 'next/server';
+import { sendEmail, getContactEmailTemplate } from '@/lib/email';
 
 export async function POST(request) {
   try {
     const body = await request.json();
     const { name, email, phone, company, country, interest, message } = body;
 
-    // For MVP, just log the form submission
-    console.log('Contact form submission:', {
+    // Validate required fields
+    if (!name || !email || !message) {
+      return NextResponse.json({ 
+        error: 'Name, email, and message are required.' 
+      }, { status: 400 });
+    }
+
+    // Prepare email data
+    const emailData = {
       name,
       email,
       phone,
       company,
       country,
       interest,
-      message,
-      timestamp: new Date().toISOString()
+      message
+    };
+
+    // Send email to info@flowitec.com
+    const emailResult = await sendEmail({
+      to: 'info@flowitec.com',
+      subject: `New Contact Form Submission from ${name}`,
+      html: getContactEmailTemplate(emailData),
+      formType: 'contact'
     });
 
-    // Simulate successful submission
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Thank you for your message. We will contact you soon.' 
-    });
+    if (emailResult.success) {
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Thank you for your message. We will contact you soon.' 
+      });
+    } else {
+      throw new Error('Failed to send email');
+    }
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json({ 

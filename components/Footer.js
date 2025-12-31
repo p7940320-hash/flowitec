@@ -107,14 +107,20 @@ const Footer = () => {
           <h3 className="text-2xl font-bold mb-8 text-center">Our Presence Across Africa</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {BRANCHES.map((branch) => (
-              <div key={branch.id} className="bg-gray-800/50 p-6 rounded-xl text-center hover:bg-gray-800 transition-colors">
+              <div key={branch.id} className="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-800 transition-colors">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-xl font-bold mb-1">{branch.country}</div>
-                <div className="text-base text-gray-400 mb-3">{branch.city}</div>
-                <div className="text-sm text-primary">{branch.email}</div>
-                {branch.phone && <div className="text-sm text-gray-400 mt-1">{branch.phone}</div>}
+                <div className="text-xl font-bold mb-2 text-center">{branch.title}</div>
+                <div className="space-y-2 text-sm text-gray-300 mb-4">
+                  {branch.address_lines && branch.address_lines.map((line, idx) => (
+                    <div key={idx} className="text-center">{line}</div>
+                  ))}
+                </div>
+                <div className="text-center space-y-1">
+                  <div className="text-sm text-primary">{branch.email}</div>
+                  {branch.phone && <div className="text-sm text-gray-400">{branch.phone}</div>}
+                </div>
               </div>
             ))}
           </div>
